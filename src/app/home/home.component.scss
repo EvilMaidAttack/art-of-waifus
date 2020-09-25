@@ -1,11 +1,39 @@
+div {
+  border-radius: 7px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 500px;
+  margin: auto;
+}
+
 div.title {
-    position:relative;
-    background-color: #eee;
-    width: 500px;
-    float:right;
-    margin: 100px 75px 0 0;
+  position: relative;
+  width: 500px;
+  float: right;
+  top: 100px;
+  right: 75px;
+  display: block;
+  cursor: pointer;
+}
+
+div.test {
+  position: relative;
+  top: 175px;
+  display: inline;
+  padding: 1em;
+  left: 300px;
+}
+
+.over {
+  position: relative;
+  z-index: 1;
+  color: green;
+  background: wheat;
+  display: block;
 }
 
 * {
-    text-align: center;
+  text-align: center;
 }

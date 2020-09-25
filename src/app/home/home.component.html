@@ -1,8 +1,39 @@
-<div class="title">
-    <h1>Art of Waifus</h1>
-    <p>Find beautiful art.</p>
-    <p>Vote for your favorite character.</p>
-    <p>Compare and share.</p>
+<div
+  class="title"
+  [@myAnimation]="state"
+  (mouseenter)="animateMeLarge()"
+  (mouseleave)="animateMeSmall()"
+  (click)="toggleInfo()"
+>
+  <h1>Art</h1>
+  <p>Find beautiful art.</p>
+  <p>Vote for your favorite character.</p>
+  <p>Click now to start.</p>
 </div>
 
+<div *ngIf="info" class="test" [@myToggleInfoTrigger]="info">
+  Thanks for clicking!
+</div>
 
+<div>
+  <hover-container>
+    This is a box 1.
+    <ng-container overlay>1</ng-container>
+  </hover-container>
+
+  <hover-container>
+    <p>Paragraph is under overlay.</p>
+    <ng-container overlay>2</ng-container>
+    <span class="over">This text is over overlay.</span>
+  </hover-container>
+
+  <hover-container>
+    <img src="assets/idea.png" />
+    <ng-container overlay>3</ng-container>
+  </hover-container>
+
+  <hover-container>
+    This is a box 4.
+    <ng-container overlay>4</ng-container>
+  </hover-container>
+</div>
